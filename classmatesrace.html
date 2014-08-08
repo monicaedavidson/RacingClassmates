@@ -1,38 +1,160 @@
 <!DOCTYPE html>
-<title>Interactive Haiku Generator</title>
+<title>Racing Classmates</title>
 	<header>
-		<h1>Welcome to Code Fellows Haiku Generator!</h1>
-		<p>Hello and welcome, everyone! Down below is the Code Fellows Haiku Generator. To use, simply choose some words to input into the following haiku:</p>
-
-		<p>The first word I would like to select is<select>  <!--Number of the follow varying: -->
- 		 <option value=".....">S 1</option>
- 		 <option value=".....">S 1</option>
- 		 <option value=".....">S 1</option>
-  		 <option value=".....">S 1</option>
-		</select>
-			The second word I would like to select is<select>
- 		 <option value=".....">S 1</option>
- 		 <option value=".....">S 1</option>
- 		 <option value=".....">S 1</option>
-  		 <option value=".....">S 1</option>
-		</select>
-
-
-
-		<p>After you have choosen a few words, click the submit button to see your own haiku!</p>
-	</header>
+		<h1 align="center">Welcome to Code Fellows Racing Classmates Simulation!</h1>
+		
+		<h2 align="center"><img src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/191314-31ab9e94701f7823ba0aadc01dd56959-medium_jpg.jpg?buster=1386182435" alt="Code Fellows Logo" width="120" height="100"></h2>
+	
+	<script src="race.js"></script>	
 
 	<body>
-		<article> <!--JS generated input-->
+		<article>
 			<section>
+				<p><h1>Hello and welcome, everyone! Down below is the Code Fellows Racing Classmates. Please select four of your classmates and then select their focus and speed level. Focus level ranges from 1 to 10, with 1 being the lowest level of focus and 10 being the highest. Speed, also, varies from 1 to 10; with 1 being very slow and 10 being extremly fast.</h1></p>
 			</section>
-		</article>
 
-		<aside>
-			<div align="right"> <!--Links to other websites about Haikus (align this to top, right and down--></div>
+			<section>
+				<p><h2>The first classmate I would like to select is:</h2><select name="racerOne"> 
+ 		 		<option value="mark">Mark Ableidiner</option>
+ 				<option value="jason">Jason Brokaw</option>
+ 		 		<option value="brook">Brook Riggio</option>
+  				<option value="brian">Brian Caldwell</option>
+  		 		<option value="miriam">Mariam Calicdan</option>
+  		 		<option value="monica">Monica Davidson</option>
+  		 		<option value="lily">Lily George</option>
+  		 		<option value="craig">Craig Grant</option>
+  		 		<option value="charles">Charles Gust</option>
+	  		 	<option value="sam">Sam Hamm</option>
+		  		<option value="andrewh">Andrew Hwang</option>
+		  		<option value="shane">Shane Kalles</option>
+		  		<option value="patrick">Patrick Kilgallon</option>
+		  		<option value="vincent">Vincent Lee</option>
+		  		<option value="john">John Leonard</option>
+		  		<option value="dexter">Dexter Lesaca</option>
+		  		<option value="kelsey">Kelsey May</option>
+		  		<option value="philip">Philip Nguyen</option>
+		  		<option value="erik">Erik Nilsen</option>
+		  		<option value="nathan">Nathan O'Brian</option>
+		  		<option value="forrest">Forrest Parker</option>
+		  		<option value="andrewp">Andrew Potter</option>
+		  		<option value="elizabeth">Elizabeth Rives</option>
+		  		<option value="emmmanuel">Emmmanuel Santos</option>
+		  		<option value="jacob">Jacob Shafer</option>
+		  		<option value="jeff">Jeff Thompson</option>
+		  		<option value="kevint">Kevin Trottier</option>
+		  		<option value="matt">Matt Wojciakowski</option>
+		  		<option value="hannah">Hannah Won</option>
+		  		<option value="austin">Austin Walan Worachet</option>
+		  		<option value="kevinx">Kevin Xue</option>
+		  		<option value="malvin">Malvin Yeung</option>
+		  		<option value="ryan">Ryan Sobol</option>
+				</select></p>
 
-		</aside>
-	</body>
+				<p>This classmates focus level is:<select name="currentRacerOneFocus"> 
+		 		<option value="1">1</option>
+		 		<option value="2">2</option>
+		 		<option value="3">3</option>
+		  		<option value="4">4</option>
+		  		<option value="5">5</option>
+		  		<option value="6">6</option>
+		  		<option value="7">7</option>
+		  		<option value="8">8</option>
+		  		<option value="9">9</option>
+		  		<option value="10">10</option>
+				</select></p>
+
+				<p>This classmates speed level is:<select name="racerOneSpeed"> 
+		 		<option value="1">1</option>
+		 		<option value="2">2</option>
+		 		<option value="3">3</option>
+		  		<option value="4">4</option>
+		  		<option value="5">5</option>
+		  		<option value="6">6</option>
+		  		<option value="7">7</option>
+		  		<option value="8">8</option>
+		  		<option value="9">9</option>
+		  		<option value="10">10</option>
+				</select></p>
+			</section>
+
+
+			<section>
+				<p><h2>The second classmate I would like to select is:</h2><select name="racerTwo"> 
+ 		 		<option value="mark">Mark Ableidiner</option>
+ 				<option value="jason">Jason Brokaw</option>
+ 		 		<option value="brook">Brook Riggio</option>
+  				<option value="brian">Brian Caldwell</option>
+  		 		<option value="miriam">Mariam Calicdan</option>
+  		 		<option value="monica">Monica Davidson</option>
+  		 		<option value="lily">Lily George</option>
+  		 		<option value="craig">Craig Grant</option>
+  		 		<option value="charles">Charles Gust</option>
+	  		 	<option value="sam">Sam Hamm</option>
+		  		<option value="andrewh">Andrew Hwang</option>
+		  		<option value="shane">Shane Kalles</option>
+		  		<option value="patrick">Patrick Kilgallon</option>
+		  		<option value="vincent">Vincent Lee</option>
+		  		<option value="john">John Leonard</option>
+		  		<option value="dexter">Dexter Lesaca</option>
+		  		<option value="kelsey">Kelsey May</option>
+		  		<option value="philip">Philip Nguyen</option>
+		  		<option value="erik">Erik Nilsen</option>
+		  		<option value="nathan">Nathan O'Brian</option>
+		  		<option value="forrest">Forrest Parker</option>
+		  		<option value="andrewp">Andrew Potter</option>
+		  		<option value="elizabeth">Elizabeth Rives</option>
+		  		<option value="emmmanuel">Emmmanuel Santos</option>
+		  		<option value="jacob">Jacob Shafer</option>
+		  		<option value="jeff">Jeff Thompson</option>
+		  		<option value="kevint">Kevin Trottier</option>
+		  		<option value="matt">Matt Wojciakowski</option>
+		  		<option value="hannah">Hannah Won</option>
+		  		<option value="austin">Austin Walan Worachet</option>
+		  		<option value="kevinx">Kevin Xue</option>
+		  		<option value="malvin">Malvin Yeung</option>
+		  		<option value="ryan">Ryan Sobol</option>
+				</select></p>
+
+				<p>This classmates focus level is:<select name="currentRacerTwo"> 
+		 		 <option value="1">1</option>
+		 		 <option value="2">2</option>
+		 		 <option value="3">3</option>
+		  		 <option value="4">4</option>
+		  		 <option value="5">5</option>
+		  		 <option value="6">6</option>
+		  		 <option value="7">7</option>
+		  		 <option value="8">8</option>
+		  		 <option value="9">9</option>
+		  		 <option value="10">10</option>
+				</select></p>
+
+				<p>This classmates speed level is:<select name="racerTwo"> 
+		 		 <option value="1">1</option>
+		 		 <option value="2">2</option>
+		 		 <option value="3">3</option>
+		  		 <option value="4">4</option>
+		  		 <option value="5">5</option>
+		  		 <option value="6">6</option>
+		  		 <option value="7">7</option>
+		  		 <option value="8">8</option>
+		  		 <option value="9">9</option>
+		  		 <option value="10">10</option>
+				</select></p>
+			</section>
+
+
+		<p><h2>After you have choosen your racers and their properties, click the race button below to see the competition!</h2>
+
+
+		<button onclick="race()">Race!</button>
+			
+
+
+			</article>
+		</body>
+	</header>
+
+	
 
 	&nbsp;
 	&nbsp;
@@ -42,7 +164,7 @@
 	&nbsp;
 
 	<footer>
-		<div align="left">Copyright 2014 &copy; by the awesome Same Hamm &amp; Monica Davidson</div>
+		<div align="left"><h5>Copyright 2014 &copy; by the awesome Sam Hamm &amp; Monica Davidson</h5></div>
 	</footer>
 
 </html>
