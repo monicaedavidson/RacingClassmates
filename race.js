@@ -1,15 +1,3 @@
-function Racer(name, speed, focus) {
-  this.name = name;
-  this.speed = speed;
-  this.focus = focus;
-  }
-
-function Winner(name) {
-  this.name = racerOne;
-}
-
-function race() {
-
   var racerOneFocus = 0;
   var racerOneSpeed = 0;
   var racerTwoFocus = 0;
@@ -23,13 +11,23 @@ function race() {
   var twoSpeed = parseInt(racerTwo.speed);
   var raceResult1, raceResult2;
 
+function Racer(name, speed, focus) {
+  this.name = name;
+  this.speed = speed;
+  this.focus = focus;
+  }
+
+function Winner(name) {
+  this.name = racerOne;
+}
+
+function race() {
+
   racerOne = new Racer (document.getElementsByName('racerOne')[0].value, document.getElementsByName('racerOneSpeed')[0].value, document.getElementsByName('racerOneFocus')[0].value);
   racerTwo = new Racer (document.getElementsByName('racerTwo')[0].value, document.getElementsByName('racerTwoSpeed')[0].value, document.getElementsByName('racerTwoFocus')[0].value);
 
-  var raceResult1 = (racerOne.name + " and " + racerTwo.name + " have agreed to a 5-minute race...<br /><br />AND THEY'RE OFF!!!<br /><br />");
+  console.log (racerOne.name + " and " + racerTwo.name + " have agreed to a 5-minute race...<br /><br />AND THEY'RE OFF!!!<br /><br />");
 
-  //the i in the for loop is the number of minutes of the race
-  //since RacerTwos can travel 20 meters/minute, I multiplied speed by 20m in the results
   for (var i = 1; i < 6; i++) {
 
     var currentRacerOneFocus = currentRacerOneFocus - i;
