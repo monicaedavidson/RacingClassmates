@@ -10,8 +10,6 @@
   var twoFocus = 0;
   var twoSpeed = 0;
   var raceResult1, raceResult2;
-  var oneLegal = true;
-  var twoLegal = true;
 
 function Racer(name, speed, focus) {
   this.name = name;
