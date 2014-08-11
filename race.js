@@ -10,6 +10,8 @@
   var twoFocus = 0;
   var twoSpeed = 0;
   var raceResult1, raceResult2;
+  var oneLegal = true;
+  var twoLegal = true;
 
 function Racer(name, speed, focus) {
   this.name = name;
@@ -17,30 +19,39 @@ function Racer(name, speed, focus) {
   this.focus = focus;
   }
 
-function Winner(name) {
-  this.name = racerOne;
-}
-
 function race() {
 
   racerOne = new Racer (document.getElementsByName('racerOne')[0].value, document.getElementsByName('racerOneSpeed')[0].value, document.getElementsByName('racerOneFocus')[0].value);
   racerTwo = new Racer (document.getElementsByName('racerTwo')[0].value, document.getElementsByName('racerTwoSpeed')[0].value, document.getElementsByName('racerTwoFocus')[0].value);
 
-  oneFocus = parseInt(racerOne.focus);
+  oneFocus = parseInt(racerOne.focus); 
   oneSpeed = parseInt(racerOne.speed);
   twoFocus = parseInt(racerTwo.focus);
   twoSpeed = parseInt(racerTwo.speed);
 
-  console.log (racerOne.name + " and " + racerTwo.name + " have agreed to a 5-minute race...<br /><br />AND THEY'RE OFF!!!<br /><br />");
+  console.log (racerOne.name + " and " + racerTwo.name + " have agreed to a 5-minute race... AND THEY'RE OFF!!!");
 
   for (var i = 1; i < 6; i++) {
 
-    var currentRacerOneFocus = currentRacerOneFocus - i;
-    var currentRacerTwoFocus = currentRacerTwoFocus - i;
+    racerOneTotal += 1.3 * (Math.pow(oneSpeed, oneFocus) / Math.floor((Math.random() * 7) + 1)); 
+    racerTwoTotal += 1.3 * (Math.pow(twoSpeed, twoFocus) / Math.floor((Math.random() * 7) + 1));
+  
+    var x = "After " + i + " minutes..." + racerOne.name + " has traveled " + racerOneTotal.toFixed(0) * 13 + " meters! " + racerTwo.name + " has traveled " + racerTwoTotal.toFixed(0) * 13 + " meters! ";
+    console.log(x);
+    document.getElementById('box').innerHTML += x + "\n";
 
-    racerOneTotal += Math.pow(oneSpeed, oneFocus);
-    racerTwoTotal += Math.pow(twoSpeed, twoFocus);
-
-    console.log ("After " + i + " minutes..." + racerOne.name + " has traveled " + racerOneTotal + " meters!" + racerTwo.name + " has traveled " + racerTwoTotal + " meters!" + Winner.name + " won!");
+  if (i === 5 && racerOneTotal === racerTwoTotal) {
+      console.log ("It's a tie!");
+      document.getElementById('box').innerHTML += "It's a tie!"+ "\n";
+      }
+      else if (i === 5 && racerOneTotal > racerTwoTotal) {
+      console.log (racerOne.name + " won!")
+      document.getElementById('box').innerHTML += racerOne.name + " won!" + "\n";
+      }
+      else if (i === 5) {
+      console.log (racerTwo.name + " won!")
+      document.getElementById('box').innerHTML += racerTwo.name + " won!" + "\n";
+      }
+    }
   }
-};
+
