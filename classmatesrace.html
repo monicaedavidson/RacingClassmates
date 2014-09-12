@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <title>Code Fellows Bootcamp-26: Track and Field Day!</title>
-
 <header>
 	<h1 align="center">Code Fellows Bootcamp 26 <em>(CF.B26)</em>: Race Simulation</h1>
 	<h2 align="center"><img src="https://d1qb2nb5cznatu.cloudfront.net/startups/i/191314-31ab9e94701f7823ba0aadc01dd56959-medium_jpg.jpg?buster=1386182435" alt="Code Fellows Logo" width="120" height="100"></h2>
@@ -12,12 +10,13 @@
 	<article>
 		<section>
 			<p><em><h1 align="center">Here's how it works:</h1></em></p>
-			<p><h2 align="center">You get to pick two CF.B26 students to race against each other.
-			<p>You can assign Speed and Focus values to each student as you see fit...</p><p>Speed and Focus values range between 1 and 5.</p>
-			</section>
+			<p><h2 align="center">You get to pick two CF.B26 students to race against each other.</h2></p>
+			<p>You can assign Speed and Focus values to each student as you see fit...</p>
+      <p>Speed and Focus values range between 1 and 5.</p>
+		</section>
 		
-		<section>
-			<form>
+		<form>
+			<section>
 				<p align="center"><h2>Student Racer #1 is...</h2>
 					<select name="racerOne">
 		 		 	<option value="Andrew H.">Andrew Hwang</option>
@@ -69,10 +68,9 @@
 			  	<option value="4">4</option>
 			  	<option value="5">5</option>
 			  	</select></p>
-				</section>
+		  </section>
 
-
-				<section>
+		  <section>
 					<p><h2>Student Racer #2 is:</h2><select name="racerTwo">
 	 		 		<option value="Andrew H.">Andrew Hwang</option>
 				 	<option value="Andrew P.">Andrew Potter</option>
@@ -123,16 +121,14 @@
 			  	<option value="4">4</option>
 			  	<option value="5">5</option>
 					</select></p>
-				</section>
+      </section> 
+    </form>
 
-			<p><h2>After you have choosen each of your racers and her/his properties, click the race button below to see the competition!!</h2>
+		<p><h2>After you have choosen each of your racers and her/his properties, click the race button below to see the competition!!</h2></p>
 			
-			<input id="Race" type="button" value="Race!" onclick="race();" />
-		</form>
-
+		<input id="Race" type="button" value="Race!" onclick="race();" />
 		<textarea rows="20" cols="60" id="box"> </textarea>
 
-
-			</article>
-		</body>
-	</html>
+	</article>
+ </body>
+</html>
